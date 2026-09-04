@@ -19,6 +19,7 @@ const (
 type BaseConfig struct {
 	LogLevel  string `json:"LogLevel"`
 	PprofPort string `json:"PprofPort"`
+	APIPort   int    `json:"ApiPort"`
 }
 
 func GetConfiguration() *BaseConfig {
@@ -34,6 +35,7 @@ func getDefaultConfiguration() BaseConfig {
 	return BaseConfig{
 		LogLevel:  "warning",
 		PprofPort: ":10001",
+		APIPort:   11000,
 	}
 }
 
@@ -98,5 +100,5 @@ func GetPrometheusPort() int {
 }
 
 func GetRpcGatewayPort() int {
-	return 11000
+	return GetConfiguration().APIPort
 }
