@@ -6,6 +6,8 @@ Handles setting up config and logging
 Connects to a postgreSQL database.
 Connects to a RabbitMQ messagequeue. 
 
+More to follow 
+
 To start it has a simple 'User' definition to demonstrate basic CRUD.
 
 This service can be run in a number of ways
@@ -28,3 +30,4 @@ to parent directory and add other services there to package multiple services in
 docker-compose -f docker-compose.yml build
 docker-compose -f docker-compose.yml up -d 
 docker-compose -f docker-compose.yml down
+
