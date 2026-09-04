@@ -1,0 +1,20 @@
+
+Database - use database/sql standard lib
+        - pgx driver (github.com/jackc/pgx) (pgx/stdlib)
+        - Check out sqlx, sqlc, or squirrel for query helpers (not ORMs) 
+            - sqlx - extends database/sql with struct scanning (db.Get(&user, query, id) ), named parameters, etc - thin
+              layer
+            - sqlc - generates type-safe go code from raw SQL queries you write. You write real SQL, it generates the
+              boilerplate. Popular for compile-time safety without ORM abstraction
+            - squirrel - a SQL query builder if you want programmatic query construction without hand-writing every
+              string
+
+GRPC - Add this in and have it handle APIs similar to how EventMonitor did it
+    - Need to install grpc
+
+MQ - Add in RabbitMQ and Kafka support for different styles of message queue support
+
+Config - at least can start with logging levels and grpc config?
+
+Logging - Prometheus and general debug logging would be good
+

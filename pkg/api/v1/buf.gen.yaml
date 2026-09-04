@@ -1,0 +1,22 @@
+version: v2
+plugins:
+  # Generates Go structs from your messages/services
+  - remote: buf.build/protocolbuffers/go
+    out: gen/go
+    opt: paths=source_relative
+ 
+  # Generates the gRPC client/server interfaces (Client, Server, New*Client, etc.)
+  - remote: buf.build/grpc/go
+    out: gen/go
+    opt: paths=source_relative
+
+  # Generates the grpc-gateway reverse-proxy code (HTTP -> gRPC)
+  - remote: buf.build/grpc-ecosystem/gateway
+    out: gen/go
+    opt: paths=source_relative
+ 
+  # Generates the OpenAPI (Swagger) spec from your openapiv2 annotations
+  - remote: buf.build/grpc-ecosystem/openapiv2
+    out: gen/openapiv2
+ 
+
