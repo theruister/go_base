@@ -1,0 +1,16 @@
+networks:
+  backend: {}
+services:
+  goBase:
+    build: 
+      context: ~/projects/goBase
+      dockerfile: Dockerfile
+    container_name: go-base
+    environment:
+      LOGLEVEL: "info"
+    ports:
+      - '8083:11000'
+    image: go-base
+    networks:
+      backend: {}
+
